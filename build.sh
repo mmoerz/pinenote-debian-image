@@ -1,9 +1,10 @@
 #!/bin/bash
 
+export target_root_partition=6
 # This "build system" assumes that the recipes are part of a build "pipeline":
 # each recipe in the pipeline continues the work done by the previous recipe.
 # That work is saved in a tar.gz file with the same name as the recipe that
-# build it. This method allows us to agressively cache the work done at each
+# build it. This method allows us to agreusively cache the work done at each
 # step, and only rebuild the tar.gz files starting with the first recipe that
 # was changed in the pipeline.
 # ./build.sh builds by default the recipes found in the recipes-pipeline file.
